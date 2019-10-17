@@ -1,9 +1,41 @@
-# sufu
+# package name
 
-js 工具库。
+> write npm description here.
 
-# api
+## Installation
 
-- 函数柯里化
-- 创建单例对象
-- 创建发布订阅对象
+```shell
+npm i --save [package name]
+```
+
+## Usage
+
+```js
+// write package demo here
+```
+
+## API
+
+### api name
+
+| name | type                         | required | default                   | description |
+| ---- | ---------------------------- | -------- | ------------------------- | ----------- |
+| a    | number                       | √        | 0                         |             |
+| b    | string                       |          | 'awesome-boilerplate-cli' |
+| c    | boolean                      |          | false                     |             |
+| d    | object                       |          | {}                        |
+| e    | array                        |          | []                        |
+| f    | function(arg: number):number |          |                           |
+| g    | ReactNode                    |          | <div />                   |
+
+#### api arguments
+
+> specific api arguments if necessary
+
+## Issues
+
+[issues here]()
+
+## Changelog
+
+[CHANGELOG.md]()
