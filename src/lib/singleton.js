@@ -1,5 +1,5 @@
 // 创建单例
-export default (factoryMethod) => {
+export default factoryMethod => {
   let obj
 
   return (...rest) => {

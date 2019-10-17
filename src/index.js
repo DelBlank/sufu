@@ -1,1 +1,1 @@
-export {default as singleton} from './lib/singleton'
+export { default as singleton } from './lib/singleton'
