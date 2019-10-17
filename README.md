@@ -1,41 +1,37 @@
-# package name
+# sufu
 
-> write npm description here.
+js 工具库。
 
 ## Installation
 
 ```shell
-npm i --save [package name]
-```
-
-## Usage
-
-```js
-// write package demo here
+npm i --save sufu
 ```
 
 ## API
 
-### api name
+### singleton
 
-| name | type                         | required | default                   | description |
-| ---- | ---------------------------- | -------- | ------------------------- | ----------- |
-| a    | number                       | √        | 0                         |             |
-| b    | string                       |          | 'awesome-boilerplate-cli' |
-| c    | boolean                      |          | false                     |             |
-| d    | object                       |          | {}                        |
-| e    | array                        |          | []                        |
-| f    | function(arg: number):number |          |                           |
-| g    | ReactNode                    |          | <div />                   |
+创建单例对象。
 
-#### api arguments
+示例：
 
-> specific api arguments if necessary
+```js
+import { singleton } from "sufu";
 
-## Issues
+const createObj = singleton(() => ({ a: 1 }));
 
-[issues here]()
+// obj1 === obj2: true
+const obj1 = createObj();
+const obj2 = createObj();
+```
+
+参数：
+
+| name          | type                    | required | default | description |
+| ------------- | ----------------------- | -------- | ------- | ----------- |
+| factoryMethod | function(args: any):any |          |         |
 
 ## Changelog
 
-[CHANGELOG.md]()
+[CHANGELOG.md](https://github.com/DelBlank/sufu/blob/master/CHANGELOG.md)

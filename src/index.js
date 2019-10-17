@@ -1,2 +1,1 @@
-// source code entry
-export default () => `this is source code entry`
+export {default as singleton} from './lib/singleton'

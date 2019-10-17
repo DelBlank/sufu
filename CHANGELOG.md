@@ -1,29 +1,7 @@
-## 0.1.0 (YYYY-MM-DD)
-
-**breaking change**
-
--
+## 0.1.0 (2019-10-17)
 
 feature:
 
--
-
-bugfix:
-
--
-
-refactor:
-
--
-
-docs:
-
--
-
-style:
-
--
-
-other:
-
--
+- 项目初始化
+- api:
+  - `singleton`
