@@ -28,9 +28,9 @@ const obj2 = createObj();
 
 参数：
 
-| name          | type                    | required | default | description |
-| ------------- | ----------------------- | -------- | ------- | ----------- |
-| factoryMethod | function(args: any):any |          |         |
+| name          | type                    | required | default | description      |
+| ------------- | ----------------------- | -------- | ------- | ---------------- |
+| factoryMethod | function(args: any):any | √        |         | 单例对象构造函数 |
 
 ## Changelog
 
