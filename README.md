@@ -72,11 +72,11 @@ vf(1, 2, 3, 11, 12, true); // console: 1 2 3 11 [object object] true
 
 `validator`:
 
-| name  | type                           | required | default | description                           |
-| ----- | ------------------------------ | -------- | ------- | ------------------------------------- |
-| name  | string                         | √        |         | 参数名称                              |
-| rule  | string / function(any):boolean | √        |         | 校验规则，多个校验规则可通过 `|` 拼接 |
-| error | string                         |          |         | 校验出错提示                          |
+| name  | type                           | required | default | description                                           |
+| ----- | ------------------------------ | -------- | ------- | ----------------------------------------------------- |
+| name  | string                         | √        |         | 参数名称                                              |
+| rule  | string / function(any):boolean | √        |         | 校验规则，多个校验规则可通过 <strong>\|</strong> 拼接 |
+| error | string                         |          |         | 校验出错提示                                          |
 
 自带校验规则：
 
