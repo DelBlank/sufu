@@ -1,7 +1,8 @@
-## 0.1.0 (2019-10-17)
+## 0.1.0 (2019-11-22)
 
 feature:
 
 - 项目初始化
 - api:
   - `singleton`
+  - `validateArgs`
