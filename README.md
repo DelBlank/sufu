@@ -46,16 +46,16 @@ const f = (a, b, c, d, e, f) => {
 };
 
 const vf = validateArgs(
-  ["a", "number"],
-  ["b", "number|string"],
+  ["a", "number", "argument a should be number"],
+  ["b", "number|string", "argument b should be number or string"],
   ["c", "any"],
   ["d", d => d > 10, "d should be bigger than 10"],
-  ["e", "nonempty"],
-  ["f", "required"]
+  ["e", "nonempty", "e should not be empty"],
+  ["f", "required", "f is required"]
 )(f);
 
-vf("1"); // throw error: a should be number
-vf(1, {}); // warn: b should be number or string
+vf("1"); // throw error: argument a should be number
+vf(1, {}); // throw error: argument b should be number or string
 vf(1, 2, 3, 4); // throw error: d should be bigger than 10
 vf(1, 2, 3, 11, []); // throw error: e should not be empty
 vf(1, 2, 3, 11, {}); // throw error: e should not be empty
@@ -72,11 +72,11 @@ vf(1, 2, 3, 11, 12, true); // console: 1 2 3 11 [object object] true
 
 `validator`:
 
-| name  | type                           | required | default | description                                           |
-| ----- | ------------------------------ | -------- | ------- | ----------------------------------------------------- |
-| name  | string                         | √        |         | 参数名称                                              |
-| rule  | string / function(any):boolean | √        |         | 校验规则，多个校验规则可通过 <strong>\|</strong> 拼接 |
-| error | string                         |          |         | 校验出错提示                                          |
+| name  | type                           | required | default | description                                                  |
+| ----- | ------------------------------ | -------- | ------- | ------------------------------------------------------------ |
+| name  | string                         | √        |         | 参数名称                                                     |
+| rule  | string / function(any):boolean | √        |         | 校验规则，多个校验规则可通过 <strong>\|</strong> 拼接        |
+| error | string                         |          |         | 校验出错提示，默认提示为 `argument ${name} validation error` |
 
 自带校验规则：
 

@@ -13,27 +13,23 @@ import {
 } from 'lodash'
 
 // 默认校验规则
-const createRuleMap = name => {
-  const prefix = `argument ${name}`
-
-  return {
-    number: [isNumber, `${prefix} should be number`],
-    string: [isString, `${prefix} should be string`],
-    boolean: [isBoolean, `${prefix} should be boolean`],
-    array: [isArray, `${prefix} should be array`],
-    object: [isObject, `${prefix} should be object`],
-    plain_object: [isPlainObject, `${prefix} should be plain object`],
-    any: [() => true],
-    required: [v => !isUndefined(v) && !isNull(v), `${prefix} is required`],
-    nonempty: [isEmpty, `${prefix} should not be empty`]
-  }
+const ruleMap = {
+  number: isNumber,
+  string: isString,
+  boolean: isBoolean,
+  array: isArray,
+  object: isObject,
+  plain_object: isPlainObject,
+  any: () => true,
+  required: v => !isUndefined(v) && !isNull(v),
+  nonempty: v => !isEmpty(v)
 }
 
 // 校验参数取值
 const checkArgValue = (value, validator) => {
   assert(isArray(validator), `validator should be array`)
 
-  const [name, rule, error] = validator
+  const [name, rule, error = `argument ${name} validation error`] = validator
 
   assert(
     typeof rule === 'function' || typeof rule === 'string',
@@ -41,22 +37,22 @@ const checkArgValue = (value, validator) => {
   )
 
   if (typeof rule === 'function') {
-    assert(rule(value), error || `argument ${name} occurs error`)
+    assert(rule(value), error)
 
     return
   }
 
-  const ruleMap = createRuleMap(name)
-
-  rule.split('|').forEach(r => {
-    const [checkMethod, defaultError] = ruleMap[r] || []
+  const result = rule.split('|').reduce((acc, cur) => {
+    const checkMethod = ruleMap[cur]
 
     if (!checkMethod) {
-      return
+      return acc
     }
 
-    assert(checkMethod(value), error || defaultError)
-  })
+    return acc || !!checkMethod(value)
+  }, false)
+
+  assert(result, error)
 }
 
 // 校验函数参数
