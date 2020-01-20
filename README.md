@@ -10,6 +10,9 @@ npm i --save sufu
 
 ## API
 
+- ### [singleton](#singleton)
+- ### [validateArgs](#validateargs)
+
 ### singleton
 
 根据构造函数创建单例对象。
