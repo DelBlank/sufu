@@ -10,8 +10,8 @@ npm i --save sufu
 
 ## API
 
-- ### [singleton](#singleton)
-- ### [validateArgs](#validateargs)
+- [singleton](#singleton)
+- [validateArgs](#validateargs)
 
 ### singleton
 
