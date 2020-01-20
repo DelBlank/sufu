@@ -2,6 +2,9 @@
 
 js 工具库。
 
+- [singleton - 创建单例对象](#singleton)
+- [validateArgs - 校验函数参数](#validateargs)
+
 ## Installation
 
 ```shell
@@ -9,9 +12,6 @@ npm i --save sufu
 ```
 
 ## API
-
-- [singleton](#singleton)
-- [validateArgs](#validateargs)
 
 ### singleton
 
