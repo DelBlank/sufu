@@ -4,6 +4,7 @@ js 工具库。
 
 - [singleton - 创建单例对象](#singleton)
 - [validateArgs - 校验函数参数](#validateargs)
+- [rgbToHex - rgb 转 16 进制](#rgbToHex)
 
 ## Installation
 
@@ -92,6 +93,28 @@ vf(1, 2, 3, 11, 12, true); // console: 1 2 3 11 [object object] true
 - `any`: 任意类型
 - `required`: 取值非 `undefined` 且非 `null`
 - `nonempty`: 取值非空（`undefined`, `null`, `0`, `''`, `false`, `[]`, `{}`）
+
+### rgbToHex
+
+rgb 转为 16 进制。
+
+#### 示例
+
+```js
+import { rgbToHex } from "sufu";
+
+rgbToHex(0, 0, 0); // '000000'
+rgbToHex(255, 255, 255); // 'ffffff'
+rgbToHex(172, 234, 76); // 'acea4c'
+```
+
+#### 参数
+
+| name  | type   | required | default | description |
+| ----- | ------ | -------- | ------- | ----------- |
+| red   | number | √        |         | 红色系数    |
+| green | number | √        |         | 绿色系数    |
+| blue  | number | √        |         | 蓝色系数    |
 
 ## Changelog
 

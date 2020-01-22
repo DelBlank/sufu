@@ -6,3 +6,4 @@ feature:
 - api:
   - `singleton`
   - `validateArgs`
+  - `rgbToHex`
