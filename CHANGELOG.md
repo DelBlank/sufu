@@ -8,3 +8,4 @@ feature:
   - `validateArgs`
   - `rgbToHex`
   - `hexToRgb`
+  - `rgbToHsl`

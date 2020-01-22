@@ -6,6 +6,7 @@ js 工具库。
 - [validateArgs - 校验函数参数](#validateargs)
 - [rgbToHex - rgb 转 16 进制](#rgbToHex)
 - [hexToRgb - 16 进制转 rgb](#hexToRgb)
+- [rgbToHsl - rgb 转 hsl](#rgbToHsl)
 
 ## Installation
 
@@ -140,6 +141,28 @@ hexToRgb(11332172); // [172, 234, 76]
 | name | type            | required | default | description                   |
 | ---- | --------------- | -------- | ------- | ----------------------------- |
 | hex  | string / number | √        |         | 16 进制字符串或任意进制的整数 |
+
+### rgbToHsl
+
+rgb 转为 hsl。
+
+#### 示例
+
+```js
+import { rgbToHsl } from "sufu";
+
+rgbToHsl(0, 0, 0); // [0, 0, 0]
+rgbToHsl(255, 255, 255); // [0, 0, 1]
+rgbToHsl(172, 234, 76); // [84, 0.79, 0.61]
+```
+
+#### 参数
+
+| name  | type   | required | default | description |
+| ----- | ------ | -------- | ------- | ----------- |
+| red   | number | string   | √       |             | 红色系数 |
+| green | number | string   | √       |             | 绿色系数 |
+| blue  | number | string   | √       |             | 蓝色系数 |
 
 ## Changelog
 
