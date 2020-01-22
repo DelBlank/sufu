@@ -7,6 +7,7 @@ js 工具库。
 - [rgbToHex - rgb 转 16 进制](#rgbToHex)
 - [hexToRgb - 16 进制转 rgb](#hexToRgb)
 - [rgbToHsl - rgb 转 hsl](#rgbToHsl)
+- [hslToRgb - hsl 转 rgb](#hslToRgb)
 
 ## Installation
 
@@ -114,9 +115,9 @@ rgbToHex(172, 234, 76); // 'acea4c'
 
 | name  | type   | required | default | description |
 | ----- | ------ | -------- | ------- | ----------- |
-| red   | number | string   | √       |             | 红色系数 |
-| green | number | string   | √       |             | 绿色系数 |
-| blue  | number | string   | √       |             | 蓝色系数 |
+| red   | number | √        |         | 红色系数    |
+| green | number | √        |         | 绿色系数    |
+| blue  | number | √        |         | 蓝色系数    |
 
 ### hexToRgb
 
@@ -160,9 +161,31 @@ rgbToHsl(172, 234, 76); // [84, 0.79, 0.61]
 
 | name  | type   | required | default | description |
 | ----- | ------ | -------- | ------- | ----------- |
-| red   | number | string   | √       |             | 红色系数 |
-| green | number | string   | √       |             | 绿色系数 |
-| blue  | number | string   | √       |             | 蓝色系数 |
+| red   | number | √        |         | 红色系数    |
+| green | number | √        |         | 绿色系数    |
+| blue  | number | √        |         | 蓝色系数    |
+
+### hslToRgb
+
+hsl 转为 rgb。
+
+#### 示例
+
+```js
+import { hslToRgb } from "sufu";
+
+rgbToHsl(0, 0, 0); // [0, 0, 0]
+rgbToHsl(0, 0, 1); // [255, 255, 255]
+rgbToHsl(84, 0.79, 0.61); // [172, 234, 76]
+```
+
+#### 参数
+
+| name | type   | required | default | description |
+| ---- | ------ | -------- | ------- | ----------- |
+| h    | number | √        |         | 色相        |
+| s    | number | √        |         | 饱和度      |
+| l    | number | √        |         | 亮度        |
 
 ## Changelog
 

@@ -6,5 +6,7 @@ describe('test src entry', () => {
     expect(entry).toHaveProperty('validateArgs')
     expect(entry).toHaveProperty('rgbToHex')
     expect(entry).toHaveProperty('hexToRgb')
+    expect(entry).toHaveProperty('rgbToHsl')
+    expect(entry).toHaveProperty('hslToRgb')
   })
 })

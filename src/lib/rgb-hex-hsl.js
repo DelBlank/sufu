@@ -49,3 +49,33 @@ export const rgbToHsl = (r, g, b) => {
 
   return [Math.round(h), parseFloat(s.toFixed(2)), parseFloat(l.toFixed(2))]
 }
+
+// hsl 转 rgb
+export const hslToRgb = (h, s, l) => {
+  const c = (1 - Math.abs(2 * l - 1)) * s
+  const x = c * (1 - Math.abs(((h / 60) % 2) - 1))
+  const m = l - c / 2
+  let rgb
+
+  switch (true) {
+    case h >= 0 && h < 60:
+      rgb = [c, x, 0]
+      break
+    case h >= 60 && h < 120:
+      rgb = [x, c, 0]
+      break
+    case h >= 120 && h < 180:
+      rgb = [0, c, x]
+      break
+    case h >= 180 && h < 240:
+      rgb = [0, x, c]
+      break
+    case h >= 240 && h < 300:
+      rgb = [x, 0, c]
+      break
+    case h >= 300 && h < 360:
+      rgb = [c, 0, x]
+  }
+
+  return rgb.map(color => Math.round(255 * (color + m)))
+}

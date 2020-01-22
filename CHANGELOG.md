@@ -9,3 +9,4 @@ feature:
   - `rgbToHex`
   - `hexToRgb`
   - `rgbToHsl`
+  - `hslToRgb`
