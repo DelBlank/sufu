@@ -7,3 +7,4 @@ feature:
   - `singleton`
   - `validateArgs`
   - `rgbToHex`
+  - `hexToRgb`

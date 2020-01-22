@@ -5,6 +5,7 @@ js 工具库。
 - [singleton - 创建单例对象](#singleton)
 - [validateArgs - 校验函数参数](#validateargs)
 - [rgbToHex - rgb 转 16 进制](#rgbToHex)
+- [hexToRgb - 16 进制转 rgb](#hexToRgb)
 
 ## Installation
 
@@ -112,9 +113,33 @@ rgbToHex(172, 234, 76); // 'acea4c'
 
 | name  | type   | required | default | description |
 | ----- | ------ | -------- | ------- | ----------- |
-| red   | number | √        |         | 红色系数    |
-| green | number | √        |         | 绿色系数    |
-| blue  | number | √        |         | 蓝色系数    |
+| red   | number | string   | √       |             | 红色系数 |
+| green | number | string   | √       |             | 绿色系数 |
+| blue  | number | string   | √       |             | 蓝色系数 |
+
+### hexToRgb
+
+16 进制转 rgb。
+
+#### 示例
+
+```js
+import { hexToRgb } from "sufu";
+
+hexToRgb("000000"); // [0, 0, 0]
+hexToRgb("ffffff"); // [255, 255, 255]
+hexToRgb("acea4c"); // [172, 234, 76]
+
+hexToRgb(0); // [0, 0, 0]
+hexToRgb(0xffffff); // [255, 255, 255]
+hexToRgb(11332172); // [172, 234, 76]
+```
+
+#### 参数
+
+| name | type   | required | default | description |
+| ---- | ------ | -------- | ------- | ----------- |
+| hex  | string | number   | √       |             | 16 进制字符串或任意进制的整数 |
 
 ## Changelog
 
