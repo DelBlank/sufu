@@ -174,9 +174,9 @@ hsl 转为 rgb。
 ```js
 import { hslToRgb } from "sufu";
 
-rgbToHsl(0, 0, 0); // [0, 0, 0]
-rgbToHsl(0, 0, 1); // [255, 255, 255]
-rgbToHsl(84, 0.79, 0.61); // [172, 234, 76]
+hslToRgb(0, 0, 0); // [0, 0, 0]
+hslToRgb(0, 0, 1); // [255, 255, 255]
+hslToRgb(84, 0.79, 0.61); // [172, 234, 76]
 ```
 
 #### 参数
