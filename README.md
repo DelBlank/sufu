@@ -137,9 +137,9 @@ hexToRgb(11332172); // [172, 234, 76]
 
 #### 参数
 
-| name | type   | required | default | description |
-| ---- | ------ | -------- | ------- | ----------- |
-| hex  | string | number   | √       |             | 16 进制字符串或任意进制的整数 |
+| name | type            | required | default | description                   |
+| ---- | --------------- | -------- | ------- | ----------------------------- |
+| hex  | string / number | √        |         | 16 进制字符串或任意进制的整数 |
 
 ## Changelog
 
