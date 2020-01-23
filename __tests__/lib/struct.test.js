@@ -15,7 +15,7 @@ describe('test struct', () => {
 
     expect(stack.size()).toBe(0)
     expect(stack.pop()).toBe(null)
-    expect(stack.isEmpty()).toBe(true)
+    expect(stack.empty()).toBe(true)
 
     stack.push(10)
     stack.push(true)
@@ -27,7 +27,7 @@ describe('test struct', () => {
     expect(console.log).toBeCalledWith('true')
     expect(console.log).toBeCalledWith('{"v":1}')
     expect(console.log).toBeCalledWith('[1,2,3]')
-    expect(stack.isEmpty()).toBe(false)
+    expect(stack.empty()).toBe(false)
     expect(stack.size()).toBe(4)
     expect(stack.pop()).toEqual([1, 2, 3])
     expect(stack.pop()).toEqual({ v: 1 })
@@ -35,7 +35,7 @@ describe('test struct', () => {
 
     stack.clear()
 
-    expect(stack.isEmpty()).toBe(true)
+    expect(stack.empty()).toBe(true)
     expect(stack.size()).toBe(0)
     expect(stack.pop()).toBe(null)
   })

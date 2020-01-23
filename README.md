@@ -113,21 +113,21 @@ stack.push(10); // 入栈
 stack.push(20);
 stack.size(); // 元素个数，返回 2
 stack.pop(); // 出栈，返回 20
-stack.isEmpty(); // 是否为空，返回 false
+stack.empty(); // 是否为空，返回 false
 stack.print(); // 按照先进后出的顺序以 JSON.stringify 的形式输出所有元素，输出 '20','10'
 stack.clear(); // 清除所有元素
 ```
 
 #### api
 
-| name    | type                  | required | default | description                                              |
-| ------- | --------------------- | -------- | ------- | -------------------------------------------------------- |
-| push    | function(el:any):void |          |         | 入栈                                                     |
-| pop     | function():any        |          |         | 出栈                                                     |
-| size    | function():number     |          |         | 元素个数                                                 |
-| isEmpty | function():boolean    |          |         | 栈是否为空                                               |
-| print   | function():void       |          |         | 按照先进后出的顺序以 `JSON.stringify` 的形式输出所有元素 |
-| clear   | function():void       |          |         | 清空栈                                                   |
+| name  | type                  | required | default | description                                              |
+| ----- | --------------------- | -------- | ------- | -------------------------------------------------------- |
+| push  | function(el:any):void |          |         | 入栈                                                     |
+| pop   | function():any        |          |         | 出栈                                                     |
+| size  | function():number     |          |         | 元素个数                                                 |
+| empty | function():boolean    |          |         | 栈是否为空                                               |
+| print | function():void       |          |         | 按照先进后出的顺序以 `JSON.stringify` 的形式输出所有元素 |
+| clear | function():void       |          |         | 清空栈                                                   |
 
 ### rgbToHex
 

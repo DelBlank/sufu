@@ -33,7 +33,7 @@ export class Stack {
   }
 
   // 是否为空
-  isEmpty() {
+  empty() {
     return !this.length
   }
 
