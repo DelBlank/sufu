@@ -45,7 +45,7 @@ export class Stack {
 
   // 输出所有元素
   print() {
-    for (let i = 0; i < this.length; i += 1) {
+    for (let i = this.length - 1; i > -1; i -= 1) {
       console.log(JSON.stringify(this.stack[i]))
     }
   }

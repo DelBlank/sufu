@@ -23,10 +23,10 @@ describe('test struct', () => {
     stack.push([1, 2, 3])
     stack.print()
 
-    expect(console.log).toBeCalledWith('10')
-    expect(console.log).toBeCalledWith('true')
-    expect(console.log).toBeCalledWith('{"v":1}')
     expect(console.log).toBeCalledWith('[1,2,3]')
+    expect(console.log).toBeCalledWith('{"v":1}')
+    expect(console.log).toBeCalledWith('true')
+    expect(console.log).toBeCalledWith('10')
     expect(stack.empty()).toBe(false)
     expect(stack.size()).toBe(4)
     expect(stack.pop()).toEqual([1, 2, 3])
