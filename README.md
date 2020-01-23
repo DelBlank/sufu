@@ -4,7 +4,7 @@ js 工具库。
 
 - [singleton - 创建单例对象](#singleton)
 - [validateArgs - 校验函数参数](#validateargs)
-- [stack - 栈](#stack)
+- [Stack - 栈](#Stack)
 - [rgbToHex - rgb 转 16 进制](#rgbToHex)
 - [hexToRgb - 16 进制转 rgb](#hexToRgb)
 - [rgbToHsl - rgb 转 hsl](#rgbToHsl)
@@ -98,7 +98,7 @@ vf(1, 2, 3, 11, 12, true); // console: 1 2 3 11 [object object] true
 - `required`: 取值非 `undefined` 且非 `null`
 - `nonempty`: 取值非空（`undefined`, `null`, `0`, `''`, `false`, `[]`, `{}`）
 
-### stack
+### Stack
 
 栈。
 
@@ -122,7 +122,7 @@ stack.clear(); // 清除所有元素
 
 | name    | type                  | required | default | description                                              |
 | ------- | --------------------- | -------- | ------- | -------------------------------------------------------- |
-| push    | function(el:any):void |          | 入栈    |                                                          |
+| push    | function(el:any):void |          |         | 入栈                                                     |
 | pop     | function():any        |          |         | 出栈                                                     |
 | size    | function():number     |          |         | 元素个数                                                 |
 | isEmpty | function():boolean    |          |         | 栈是否为空                                               |
