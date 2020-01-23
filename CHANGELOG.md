@@ -6,6 +6,7 @@ feature:
 - api:
   - `singleton`
   - `validateArgs`
+  - `Stack`
   - `rgbToHex`
   - `hexToRgb`
   - `rgbToHsl`

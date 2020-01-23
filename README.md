@@ -4,6 +4,7 @@ js 工具库。
 
 - [singleton - 创建单例对象](#singleton)
 - [validateArgs - 校验函数参数](#validateargs)
+- [stack - 栈](#stack)
 - [rgbToHex - rgb 转 16 进制](#rgbToHex)
 - [hexToRgb - 16 进制转 rgb](#hexToRgb)
 - [rgbToHsl - rgb 转 hsl](#rgbToHsl)
@@ -96,6 +97,37 @@ vf(1, 2, 3, 11, 12, true); // console: 1 2 3 11 [object object] true
 - `any`: 任意类型
 - `required`: 取值非 `undefined` 且非 `null`
 - `nonempty`: 取值非空（`undefined`, `null`, `0`, `''`, `false`, `[]`, `{}`）
+
+### stack
+
+栈。
+
+#### 示例
+
+```js
+import { Stack } from "sufu";
+
+const stack = new Stack();
+
+stack.push(10); // 入栈
+stack.push(20);
+stack.size(); // 元素个数，返回 2
+stack.pop(); // 出栈，返回 20
+stack.isEmpty(); // 是否为空，返回 false
+stack.print(); // 按照先进后出的顺序以 JSON.stringify 的形式输出所有元素，输出 '20','10'
+stack.clear(); // 清除所有元素
+```
+
+#### api
+
+| name    | type                  | required | default | description                                              |
+| ------- | --------------------- | -------- | ------- | -------------------------------------------------------- |
+| push    | function(el:any):void |          | 入栈    |                                                          |
+| pop     | function():any        |          |         | 出栈                                                     |
+| size    | function():number     |          |         | 元素个数                                                 |
+| isEmpty | function():boolean    |          |         | 栈是否为空                                               |
+| print   | function():void       |          |         | 按照先进后出的顺序以 `JSON.stringify` 的形式输出所有元素 |
+| clear   | function():void       |          |         | 清空栈                                                   |
 
 ### rgbToHex
 
